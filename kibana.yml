@@ -4,3 +4,4 @@ elasticsearch.url: http://elasticsearch.cloud66.local:9200
 elasticsearch.username: elastic
 elasticsearch.password: changeme
 xpack.monitoring.ui.container.elasticsearch.enabled: true
+xpack.security.enabled: false
