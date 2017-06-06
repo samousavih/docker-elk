@@ -6,6 +6,7 @@ RUN rm -f /usr/share/elasticsearch/config/elasticsearch.yml
 COPY ./elasticsearch.yml /usr/share/elasticsearch/config/
 USER root
 RUN chown elasticsearch:elasticsearch config/elasticsearch.yml
+RUN usermod -u 1000 elasticsearch
 USER elasticsearch
 
 # Add your elasticsearch plugins setup here
