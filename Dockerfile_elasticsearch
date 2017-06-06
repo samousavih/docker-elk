@@ -6,7 +6,8 @@ RUN rm -f /usr/share/elasticsearch/config/elasticsearch.yml
 COPY ./elasticsearch.yml /usr/share/elasticsearch/config/
 USER root
 RUN chown elasticsearch:elasticsearch config/elasticsearch.yml
-RUN chown -R elasticsearch:elasticsearch data/nodes
+RUN mkdir -p /usr/share/elasticsearch/data/nodes
+RUN chown -R elasticsearch:elasticsearch /usr/share/elasticsearch/data/nodes
 
 USER elasticsearch
 
